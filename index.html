@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Зерно — кофейня для практики</title>
+  <meta name="description" content="Учебный сайт вымышленной кофейни «Зерно». Меню, о нас, контакты.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="#top" class="logo">☕ Зерно</a>
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#about">О нас</a>
+      <a href="#menu">Меню</a>
+      <a href="#contact">Контакты</a>
+      <button id="theme" class="theme" aria-label="Сменить тему">🌙</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1>Кофе, который<br>хочется выпить дважды</h1>
+      <p>Свежая обжарка, домашняя выпечка и тихий уголок в центре города.</p>
+      <a href="#menu" class="btn">Смотреть меню</a>
+    </section>
+
+    <section id="about" class="section">
+      <h2>О нас</h2>
+      <div class="cards">
+        <article class="card"><span>🌱</span><h3>Свежее зерно</h3><p>Обжариваем каждую неделю небольшими партиями.</p></article>
+        <article class="card"><span>🥐</span><h3>Своя выпечка</h3><p>Круассаны и пирожные готовятся рано утром.</p></article>
+        <article class="card"><span>🛋️</span><h3>Уют</h3><p>Розетки, Wi-Fi и мягкие кресла — работайте сколько нужно.</p></article>
+      </div>
+    </section>
+
+    <section id="menu" class="section alt">
+      <h2>Меню</h2>
+      <div class="filters" id="filters">
+        <button class="chip active" data-filter="all">Все</button>
+        <button class="chip" data-filter="coffee">Кофе</button>
+        <button class="chip" data-filter="sweet">Десерты</button>
+      </div>
+      <ul class="menu" id="menuList"></ul>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Контакты</h2>
+      <p class="muted">Ул. Примерная, 12 · Ежедневно 8:00–22:00</p>
+      <form id="form" class="form" novalidate>
+        <input type="text" id="name" placeholder="Ваше имя" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <textarea id="msg" rows="4" placeholder="Сообщение" required></textarea>
+        <button class="btn" type="submit">Отправить</button>
+        <p id="status" class="status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Зерно. Учебный проект.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
